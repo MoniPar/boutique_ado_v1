@@ -1,3 +1,9 @@
+This is a walkthrough project which aims to build a Full-Stack site based on business logic used to control a centrally-owned dataset.  It has an authentication mechanism and provides paid access to the site's data and other activities based on the dataset like the purchase of a product.
+
+
+
+_____
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Monique Parnis,
