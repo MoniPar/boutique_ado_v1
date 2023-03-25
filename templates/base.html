@@ -16,12 +16,20 @@
         {% block corecss %}
             <!-- Bootstrap CSS -->
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+            <!-- Google Font links -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+            <!-- Custom CSS link -->
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock %}
 
         {% block extra_css %}
         {% endblock %}
 
-        {% block corejs %}    
+        {% block corejs %}
+            <!-- FontAwesome kit code link -->
+            <script src="https://kit.fontawesome.com/967a4d433b.js" crossorigin="anonymous"></script>    
             <!-- Separate JQuery, Popper and Bootstrap JS -->  
             <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -36,10 +44,10 @@
     
     <body>
         <header class="container-fluid fixed-top">
-            <div class="row">
+            <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                        <h2 class="logo-front text-black my-0"><strong>Boutique</strong>Ado</h2>
+                        <h2 class="logo-front text-black my-0"><strong>Boutique</strong> Ado</h2>
                     </a>
                 </div>
                 <div class="col-12 col-lg my-auto py-1 py-lg-0">
