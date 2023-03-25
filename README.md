@@ -103,11 +103,13 @@ else:
 
 ### Set Up the Templates Directory
 
-* In settings.py scroll back up to the TEMPLATES_DIR variable to Instruct Django to store the templates in the ‘templates’ BASE_DIR, like so:
+* In settings.py scroll down to the TEMPLATES variable to Instruct Django to store the root templates directory in the DIRS setting, like so:
 ```
-TEMPLATES_DIR = os.path.join(BASE_DIR, ‘templates’)
+'DIRS' = [
+    os.path.join(BASE_DIR, ‘templates’),
+]
 ```
-* Scroll down to the TEMPLATES variable and add TEMPLATES_DIR to the value of ‘DIRS’. 
+This is were the custom allauth directory will also be set.  
 
 ### Add Heroku Host Name
 
