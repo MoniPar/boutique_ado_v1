@@ -103,3 +103,15 @@ on all site buttons, giving users a consistent UX */
         padding-top: 164px;
     }
 }
+
+@media (max-width: 991px) {
+    
+    /* pad the top when navbar is collapsed on mobile */
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
