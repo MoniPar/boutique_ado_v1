@@ -45,6 +45,13 @@ Shop Now button on the Homepage */
     color: white;
 }
 
+/* an inverted version of the custom black buttons */
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colours for <a> elements */
+    border: 1px solid black;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
