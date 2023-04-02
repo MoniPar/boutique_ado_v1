@@ -108,6 +108,22 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* Positions the Toast messages */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999999;
+}
+
+.custome-toast {
+    overflow: visibile;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
