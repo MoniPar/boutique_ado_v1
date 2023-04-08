@@ -40,6 +40,19 @@
   border: 1px solid #000;
 }
 
+
+/* Country field select box */
+select,
+select option {
+    color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
+/* After checkout */
 #loading-overlay {
 	display: none;
 	position: fixed;
