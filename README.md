@@ -41,9 +41,9 @@ Since the database provided by Django is only accessible within Gitpod, a new da
 * Login to ElephantSQL and click on the top right button ‘Create New Instance’.
 * Give your plan the name of the project and select the Tiny Turtle (Free) plan.  The ‘Tags’ field can be left empty.  
 * Click on ‘Select Region’.  
-Select a data centre near you and click ‘Review’.  
+Select a data centre near you.  Choose another region if there is none in your region yet. Click ‘Review’.   
 * Make sure your plan is correct and click ‘Create Instance’. 
-* Return to the dashboard and click on this project’s instance you just created. This will open up the “Details” page where the link to the URL is displayed.  This needs to be added to the env.py file in the project’s directories.
+* Return to the dashboard and click on this project’s instance you just created. This will open up the 'Details' page where the link to the URL is displayed.  This needs to be added to the env.py file in the project’s directories as well as to the Heroku Config Vars so keep this tab open.
 
 ### Create an env.py file
 
@@ -91,12 +91,12 @@ else:
     }
 ```
 * Save and migrate this database structure to the newly connected postgreSQL database.  Run the migrate command `python3 manage.py migrate` in your terminal.
-* To make sure the application is now connected to the remote database hosted on ElephantSQL, head over to your ElephantSQL dashboard and select the newly created database instance. Select the ‘Browser’ tab on the left and click on ‘Table queries’.  This displays a dropdown field with the database structure which has been populated from the Django migrations.
+* To make sure the application is now connected to the remote database hosted on ElephantSQL, head over to your ElephantSQL dashboard and select the newly created database instance. Select the ‘Browser’ tab on the left and click on ‘Table queries’.  This displays a dropdown field with the database structure which has been populated from the Django migrations. If you select 'auth_user' and click on the 'Execute' button on the right, you should be able to see your superuser details displayed.  This confirms your tables have been created and you can add data to your database. 
 
 ### Connect the database to Heroku
 
 * Open up the Heroku dashboard, select the project’s app and click on the ‘Settings’ tab.
-* Click on ‘Reveal Config Vars’ and add the DATABASE_URL with the value of the copied URL from the database instance created on ElephantSQL.
+* Click on ‘Reveal Config Vars’ and add the DATABASE_URL with the value of the copied URL (without quotation marks) from the database instance created on ElephantSQL. 
 * Also add the SECRET_KEY with the value of the secret key added to the env.py file. 
 * If using GitPod another key needs to be added in order for the deployment to succeed.  This is PORT with the value of 8000.
 * To help get the project deployed without static files you need to add one more temporary variable.  This needs to be removed before deploying the full project.  Use DISABLE_COLLECTSTATIC as the key and ‘1’ as the value.
@@ -123,7 +123,7 @@ ALLOWED_HOSTS = [‘heroku-app-name.herokuapp.com’, ‘localhost’]
 * (Create the media, static and templates directories at the top level next to the manage.py file.) 
 * At the top level next to the manage.py file, create a new file called ‘Procfile’ with a capital ‘P’.  This tells Heroku how to run this project.  Add the following code, including the name of your project directory. 
 ```
-web: gunicorn boutique_ado.wsgi
+web: gunicorn boutique_ado.wsgi:application
 ```
 ‘web’ tells Heroku that this a process that should accept HTTP traffic.
 ‘gunicorn’ is the server used
