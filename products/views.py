@@ -113,7 +113,7 @@ def edit_product(request, product_id):
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    # prefill formby getting product
+    # prefill form by getting product
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         # instantiate a form and the specific instance to update
@@ -126,7 +126,6 @@ def edit_product(request, product_id):
             messages.error(request, 'Failed to update product. '
                                     'Please ensure the form is valid.')
     else:
-        # instantiate the product form using the product
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
