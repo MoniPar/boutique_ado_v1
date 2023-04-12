@@ -138,6 +138,19 @@ Make sure everything is saved and pushed to GitHub before continuing on.
 * When the build log is complete it should say that the app has been successfully deployed. 
 * Click on the ‘Open App’ button to view it and the Django “The install worked successfully!” page, should be displayed.
 
+### Second Deployment
+
+* When development is complete, if you had left `DEBUG = True` in the settings.py file, make sure to change it to `False`. You don't have to change anything if you had used `DEBUG = 'DEVELOPMENT' in os.environ` as your env.py file is ignored by GitHub.
+* Commit and push your code to your project's repository.
+* Navigate to the 'Deploy' tab and scroll down to 'Deploy a GitHub branch'.
+* Select the branch you want to deploy and click on the 'Deploy branch' button. When the app is deployed, you should see a message in the built log saying "Your app was successfully deployed". Click 'View' to see the deployed app in the browser. Alternatively, you can click on the 'Open App' button at the top of the page. 
+* At this stage the app should be deployed without any static files, therefore no custom styles and javascript. The images might also be absent as Heroku Dynos are ephemeral, and they can be destroyed, restarted, and moved without any warning.  In order to make them persistent, the static and media files need to be stored elsewhere. 
+
+### Creating an AWS Account
+
+[Amazon Web Services(AWS) S3](https://aws.amazon.com/) is a cloud-based storage service where we can store our static and media files. The following is an account of how I set it up.
+* Open the [Amazon AWS](https://aws.amazon.com/) website in your browser and click on the 'Create an AWS account' button at the top right. 
+* Fill in your email and 
 _____
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
