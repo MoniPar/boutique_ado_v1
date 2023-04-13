@@ -153,6 +153,15 @@ Make sure everything is saved and pushed to GitHub before continuing on.
 * Fill in your email and 
 _____
 
+### Resources
+
+* [How to test stripe webhooks locally](https://arter.dev/how-to-test-stripe-webhooks-locally)
+* 
+
+
+
+____
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Monique Parnis,
