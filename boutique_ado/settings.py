@@ -29,7 +29,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['monipar-boutique-ado.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    'monipar-boutique-ado.herokuapp.com',
+    '8000-monipar-boutique-ado-v1-029gumj4q9.us2.codeanyapp.com'
+]
 
 
 # Application definition
